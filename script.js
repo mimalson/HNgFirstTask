@@ -1,8 +1,17 @@
 // script.js
-window.onload = function () {
-    // Simulated real-time data update
-    setTimeout(() => {
-        const realTimeDataElement = document.querySelector('[data-testid="real-time-data"]');
-        realTimeDataElement.textContent = 'Real-time data: 42';
-    }, 2000);
-};
+  // Get the current date
+        const currentDate = new Date();
+
+        // Get the current day of the week (0 = Sunday, 1 = Monday, ..., 6 = Saturday)
+        const daysOfWeek = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+        const currentDayOfWeek = daysOfWeek[currentDate.getUTCDay()];
+
+        // Get the current UTC time
+        const currentUTCTime = currentDate.toUTCString();
+
+        // Display the current day of the week and UTC time
+        const dayOfWeekElement = document.getElementById('dayOfWeek');
+        const utcTimeElement = document.getElementById('utcTime');
+
+        dayOfWeekElement.textContent = 'Current day of the week: ' + currentDayOfWeek;
+        utcTimeElement.textContent = 'Current UTC time: ' + currentUTCTime;
