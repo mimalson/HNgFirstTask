@@ -1,17 +1,14 @@
-// script.js
-  // Get the current date
-        const currentDate = new Date();
-
-        // Get the current day of the week (0 = Sunday, 1 = Monday, ..., 6 = Saturday)
-        const daysOfWeek = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
-        const currentDayOfWeek = daysOfWeek[currentDate.getUTCDay()];
+ const currentDate = new Date();
 
         // Get the current UTC time
         const currentUTCTime = currentDate.toUTCString();
 
-        // Display the current day of the week and UTC time
-        const dayOfWeekElement = document.getElementById('dayOfWeek');
-        const utcTimeElement = document.getElementById('utcTime');
+        // Calculate UTC+1 time by adding one hour
+        const utcPlusOneTime = new Date(currentDate.getTime() + 60 * 60 * 1000); // Add 1 hour in milliseconds
 
-        dayOfWeekElement.textContent = 'Current day of the week: ' + currentDayOfWeek;
+        // Display the current UTC time
+        const utcTimeElement = document.getElementById('utcTime');
+        const utcTimePlusOneElement = document.getElementById('utcTimePlusOne');
+
         utcTimeElement.textContent = 'Current UTC time: ' + currentUTCTime;
+        utcTimePlusOneElement.textContent = 'UTC+1 time: ' + utcPlusOneTime.toUTCString();
