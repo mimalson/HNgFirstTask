@@ -19,7 +19,7 @@ function updateClock() {
 
 
 
-        const names = document.querySelector('[data-testid= "SlackUserName"]');
+        const names = document.querySelector('[data-testid= "slackUserName"]');
         names.innerHTML = 'meena__xx'
 
         const track = document.querySelector('[data-testid= "myTrack"]');
