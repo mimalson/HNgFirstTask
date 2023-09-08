@@ -1,3 +1,6 @@
+const name = document.querySelector('[data-testid="slackUserName"]'); 
+slackName.innerHTML = « meena__xx »;
+
 
 function updateClock() {
             // Get the current time in milliseconds
