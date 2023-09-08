@@ -8,7 +8,7 @@ function updateCurrentTimeAndDay() {
             const currentDayIndex = new Date().getDay();
             const currentDay = daysOfWeek[currentDayIndex];
 
-            currentTimeElement.textContent = `Current Time: ${currentTimeMillis} milliseconds`;
+            currentTimeElement.textContent = `Current Time: ${currentTimeMillis}`;
             currentDayElement.textContent = `Current Day: ${currentDay}`;
         }
 
