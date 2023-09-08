@@ -1,16 +1,16 @@
- const currentDate = new Date();
+function updateData() {
+            const currentDate = new Date();
+            const options = { weekday: 'long', hour: 'numeric', minute: 'numeric', second: 'numeric', timeZone: 'UTC' };
 
- // Get the current UTC time
-  const currentUTCTime = currentDate.toUTCString();
+            // Update the day of the week
+            const dayOfWeekElement = document.getElementById('currentDayOfTheWeek');
+            dayOfWeekElement.textContent = new Intl.DateTimeFormat('en-US', options).format(currentDate);
 
- // Calculate UTC+1 time by adding one hour
- const utcPlusOneTime = new Date(currentDate.getTime() + 60 * 60 * 1000); // Add 1 hour in milliseconds
+            // Update the current UTC time
+            const currentTimeElement = document.getElementById('currentUTCTime');
+            currentTimeElement.textContent = currentDate.toUTCString();
+        }
 
-// Display the current UTC time
-const utcTimeElement = document.getElementById('utcTime');
-const utcTimePlusOneElement = document.getElementById('utcCurrentDay');
-
-utcTimeElement.textContent = 'Current UTC time: ' + currentUTCTime;
-utcTimePlusOneElement.textContent = 'Local time: ' + utcPlusOneTime.toUTCString();
-
-     
+        // Call the function to update data initially and set it to update every second
+        updateData();
+        setInterval(updateData, 1000);
