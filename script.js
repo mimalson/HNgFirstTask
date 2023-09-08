@@ -1,16 +1,21 @@
- const currentDate = new Date();
+document.addEventListener("DOMContentLoaded", function () {
+    const dayOfWeek = new Date().toLocaleDateString(undefined, { weekday: 'long' });
+    const currentTime = new Date().getTime()
 
- // Get the current UTC time
-  const currentUTCTime = currentDate.toUTCString();
+    // Update the current day and time elements
+    document.querySelector("[data-testid='currentDayOfTheWeek']").textContent = `Current Day: ${dayOfWeek}`;
+    document.querySelector("[data-testid='currentUTCTime']").textContent = `Current UTC Time: ${currentTime}`;
+});
 
- // Calculate UTC+1 time by adding one hour
- const utcPlusOneTime = new Date(currentDate.getTime() + 60 * 60 * 1000); // Add 1 hour in milliseconds
+// function displayCurrentDayAndTime() {
+//     var currentDate = new Date();
 
-// Display the current UTC time
-const utcTimeElement = document.getElementById('utcTime');
-const utcTimePlusOneElement = document.getElementById('utcCurrentDay');
+//     var currentDay = currentDate.toDateString();
 
-utcTimeElement.textContent = 'Current UTC time: ' + currentUTCTime;
-utcTimePlusOneElement.textContent = 'Local time: ' + utcPlusOneTime.toUTCString();
+//     var currentTimeInMillis = currentDate.getTime()
 
-     
+//     document.querySelector("[data-testid='currentDayOfTheWeek']").textContent = `Current Day: ${currentDate}`;
+//     document.querySelector("[data-testid='currentUTCTime']").textContent = `Current UTC Time: ${currentTimeInMillis}`;
+
+//     displayCurrentDayAndTime();
+// }
