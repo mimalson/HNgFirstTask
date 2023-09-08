@@ -1,11 +1,19 @@
-document.addEventListener("DOMContentLoaded", function () {
-    const dayOfWeek = new Date().toLocaleDateString(undefined, { weekday: 'long' });
-    const currentTime = new Date().getTime()
+function updateCurrentTimeAndDay() {
+            const currentTimeElement = document.getElementById('currentUTCTime');
+            const currentDayElement = document.getElementById('currentDayOfTheWeek');
+            const currentTimeMillis = new Date().getTime();
+            
+            // Get the current day of the week
+            const daysOfWeek = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+            const currentDayIndex = new Date().getDay();
+            const currentDay = daysOfWeek[currentDayIndex];
 
-    // Update the current day and time elements
-    document.querySelector("[data-testid='currentDayOfTheWeek']").textContent = `Current Day: ${dayOfWeek}`;
-    document.querySelector("[data-testid='currentUTCTime']").textContent = `Current UTC Time: ${currentTime}`;
-});
+            currentTimeElement.textContent = `Current Time: ${currentTimeMillis}`;
+            currentDayElement.textContent = `Current Day: ${currentDay}`;
+        }
 
-setInterval(currentTime, 1000)
-currentTime () 
+        // Update the time and day every second (1000 milliseconds)
+        setInterval(updateCurrentTimeAndDay, 1000);
+
+        // Initial update
+        updateCurrentTimeAndDay();
