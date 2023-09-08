@@ -6,16 +6,4 @@ document.addEventListener("DOMContentLoaded", function () {
     document.querySelector("[data-testid='currentDayOfTheWeek']").textContent = `Current Day: ${dayOfWeek}`;
     document.querySelector("[data-testid='currentUTCTime']").textContent = `Current UTC Time: ${currentTime}`;
 });
-
-// function displayCurrentDayAndTime() {
-//     var currentDate = new Date();
-
-//     var currentDay = currentDate.toDateString();
-
-//     var currentTimeInMillis = currentDate.getTime()
-
-//     document.querySelector("[data-testid='currentDayOfTheWeek']").textContent = `Current Day: ${currentDate}`;
-//     document.querySelector("[data-testid='currentUTCTime']").textContent = `Current UTC Time: ${currentTimeInMillis}`;
-
-//     displayCurrentDayAndTime();
-// }
+currentTime () interval (1000)
