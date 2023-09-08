@@ -18,5 +18,3 @@ function updateClock() {
         updateClock();
 
 
-const name = document.querySelector('[data-testid="slackUserName"]'); 
-slackName.innerHTML = « meena__xx »;
