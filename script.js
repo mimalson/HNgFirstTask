@@ -17,3 +17,12 @@ function updateCurrentTimeAndDay() {
 
         // Initial update
         updateCurrentTimeAndDay();
+
+        const names = document.querySelector('[data-testid= "SlackUserName"]');
+        names.innerHTML = 'meena__xx'
+
+        const track = document.querySelector('[data-testid= "myTrack"]');
+        track.innerHTML = 'Frontend'
+
+    //     const  githubURL= document.querySelector('[data-testid= "myTrack"]');
+    //  githubURL.innerHTML = 'Github Repository'
