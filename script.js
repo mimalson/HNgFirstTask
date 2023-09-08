@@ -6,4 +6,6 @@ document.addEventListener("DOMContentLoaded", function () {
     document.querySelector("[data-testid='currentDayOfTheWeek']").textContent = `Current Day: ${dayOfWeek}`;
     document.querySelector("[data-testid='currentUTCTime']").textContent = `Current UTC Time: ${currentTime}`;
 });
-currentTime () interval (1000)
+
+setInterval(currentTime, 1000)
+currentTime () 
