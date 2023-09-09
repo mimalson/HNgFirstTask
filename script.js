@@ -2,7 +2,7 @@
 function updateClock() {
             // Get the current time in milliseconds
             const currentTimeMillis = Date.now();
-            document.querySelector('[data-testid="currentUTCTime"]').textContent = `Time: ${currentTimeMillis} milliseconds`;
+            document.querySelector('[data-testid="currentUTCTime"]').textContent = `Time: ${currentTimeMillis}`;
 
             // Get the current day
             const days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
@@ -19,7 +19,7 @@ function updateClock() {
 
 
 
-        const names = document.querySelector('[data-testid= "slackUserName"]');
+        const names = document.querySelector('[data-testid= "SlackUserName"]');
         names.innerHTML = 'meena__xx'
 
         const track = document.querySelector('[data-testid= "myTrack"]');
